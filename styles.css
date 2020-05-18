@@ -173,11 +173,18 @@ svg {
 
 #ladderlinks:active {
     animation: ladder 2s infinite;
+    /* animation: ladderdraaien 2s infinite;
+    transform-origin: 330px 160px; */
 }
 
 #ladderrechts_1_:active {
-    animation: ladder 2s infinite;
+/*
+    animation: ladderdraaien2 2s infinite;
+    transform-origin: 330px 160px;
+*/
+ animation: ladder 2s infinite;
 }
+
 
 @keyframes ladder {
     from {
@@ -187,6 +194,31 @@ svg {
         transform: scaleY(4);
     }
 }
+
+
+/*
+@keyframes ladderdraaien {
+
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(70deg);
+    }
+}
+
+@keyframes ladderdraaien2 {
+
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-70deg);
+    }
+}
+*/
+
+
 
 svg {
     animation: fadeIn 1s ease;
