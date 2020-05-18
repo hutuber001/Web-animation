@@ -1,0 +1,289 @@
+body {
+    background-color: #e6d184;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+/* body:active {
+    background-color: black;
+} */
+
+
+.billie {
+    cursor: crosshair;
+
+}
+
+
+#Jas_1_:active {
+    animation: truichangecolor 1s ease infinite;
+}
+
+#hoofd {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 300;
+}
+
+#bovenlichaam {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+}
+
+@keyframes truichangecolor {
+    100% {
+        fill: green;
+    }
+}
+
+#rechterbeen_1_:active {
+    animation: beenchangecolor 1s ease infinite;
+}
+
+
+/* Hoe spreek ik de rechtbeen aan??*/
+
+#SVGID_41_ {
+    animation: beenchangecolor 1s ease infinite;
+}
+
+@keyframes beenchangecolor {
+    100% {
+        fill: green;
+    }
+}
+
+
+
+/*
+@keyframes bgchangecolor {
+    from {
+        background-color: #e6d184;
+    }
+    to {
+        background-color: black;
+    }
+}*/
+
+.background {
+    animation: bgchangecolor 1s infinite;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: avenir black;
+    color: black;
+    width: 5em;
+    position: absolute;
+}
+
+h1 {
+    animation: text1 3s infinite;
+}
+
+h2 {
+    animation: text2 3s infinite;
+
+}
+
+h3 {
+    animation: text3 2s infinite;
+
+}
+
+h4 {
+    animation: text4 2s infinite;
+}
+
+@keyframes text1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(10px, 40px);
+  }
+}
+
+@keyframes text2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(30px, 60px);
+  }
+}
+
+@keyframes text3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 80px);
+  }
+}
+
+@keyframes text4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(60px, 100px);
+  }
+}
+
+svg {
+    width: 40em;
+    margin-top: 5em;
+    margin-left: 5em;
+}
+
+
+#trui {
+    position: absolute;
+}
+
+#rechterbeen:active {
+    position: relative;
+    animation: been 2s infinite;
+    transform-origin: 330px 160px;
+
+}
+
+#linkerbeen:active {
+    position: relative;
+    animation: been 2s infinite;
+    transform-origin: 350px 175px;
+}
+
+@keyframes been {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+#ladderlinks:active {
+    animation: ladder 2s infinite;
+}
+
+#ladderrechts_1_:active {
+    animation: ladder 2s infinite;
+}
+
+@keyframes ladder {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(4);
+    }
+}
+
+svg {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*Kleuren veranderen*/
+
+
+
+
+/*bron:https://codepen.io/whusterj/pres/bdYKop*/
+
+svg {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    from {
+        transform: translate(0, 0px);
+    }
+    65% {
+        transform: translate(0, 15px);
+    }
+    to {
+        transform: translate(0, -0px);
+    }
+}
+
+
+@media screen and (max-width: 35em) {
+    svg {
+        width: 60em;
+    }
+}
+
+@media screen and (min-width: 35em) {
+    svg {
+        width: 80em;
+    }
+}
+
+
+/*Schroeven - als je erop klikt ze verschuiven*/
+@keyframes schroefchangecolor {
+
+    100% {
+        fill: green;
+    }
+}
+
+#schroefrechts2 {
+    animation: schroefchangecolor 1s ease infinite;
+}
+
+div button:active {
+  transform: scale(2.0);
+}
+
+.schroeflinks1.active {
+    opacity: 100%;
+    transform: scale(200%);
+}
+
+.schroeflinks2.active {
+    opacity: 100%;
+    transform: scale(200%);
+}
+
+
+/*Plateau en billie omhoog schuiven*/
+
+/* #plateau1.2_1_, #plateau1.2, #plateau1.1_1_, #plateau1.1, #hoofd, #kettingen, #bovenlichaam, #linkerbeen, #rechterbeen:active {
+
+animation: omhoog 2s infinite;
+} */
+
+@keyframes omhoog {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(-4);
+    }
+}
+
+
+
