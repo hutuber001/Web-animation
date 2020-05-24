@@ -444,8 +444,7 @@ animation: omhoog 2s infinite;
     width: 2em;
     z-index: 5;
     position: absolute;
-    left: -1em;
-    bottom: 2.2em;
+    margin-left: 2em;
     cursor: pointer;
 }
 
