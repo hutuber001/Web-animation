@@ -8,7 +8,7 @@ body {
 #druppel {
     position: absolute;
     margin-top: -8em;
-    transform: scale(1.4);
+    transform: scale(1.5);
     cursor: no-drop;
     right: 0.1em;
     left: 0.1em;
@@ -447,6 +447,12 @@ animation: omhoog 2s infinite;
     left: -1em;
     bottom: 2.2em;
     cursor: pointer;
+}
+
+@media screen and (min-width: 35em) {
+    #pijlen {
+        display: none;
+    }
 }
 
 
