@@ -1,12 +1,27 @@
+//Define body
+let body = document.querySelector("body");
 
-    var schroeflinks1 = document.querySelector('.schroeflinks1');
-    var schroeflinks2 = document.querySelector('.schroeflinks2');
+//Turn billie met toetsenbord
+var billie = document.querySelector("#billieTotaal");
 
-function schroef {
+window.addEventListener('keydown', toggle);
 
-    schroeflinks1.classList.toggle('active');
-    schroeflinks2.classList.toggle('active');
+function toggle(event) {
+    if (event.keyCode == 40) {
+        billie.classList.toggle('billie');
+    } else {
+    };
 }
 
-schroeflinks1.addEventListener('click', schroef);
-schroeflinks2.addEventListener('click', schroef);
+//Turn billie met knop
+function turnBillieknop() {
+   var element = document.body;
+   element.classList.toggle("turnBillienow");
+}
+
+
+//Invert met knop toggle
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("invertcolor");
+}

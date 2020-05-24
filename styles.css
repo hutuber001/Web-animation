@@ -1,22 +1,51 @@
 body {
     background-color: #e6d184;
     box-sizing: border-box;
-    display: flex;
     justify-content: center;
+    margin: 0;
 }
 
-/* body:active {
-    background-color: black;
-} */
+#druppel {
+    position: absolute;
+    margin-top: -8em;
+    transform: scale(1.4);
+    cursor: no-drop;
+    right: 0.1em;
+    left: 0.1em;
+}
+
+#druppel:hover {
+    animation: druppelchange 1s ease infinite;
+}
+
+@keyframes druppelchange {
+    100% {
+        fill: green;
+    }
+}
 
 
 .billie {
+    cursor: crosshair;
+    display: block;
+    position: relative;
+    top: -5em;
+}
+
+#billieTotaal {
+        max-height: 20em;
     cursor: crosshair;
 
 }
 
 
+/*jas kleur veranderen met klik*/
 #Jas_1_:active {
+    animation: truichangecolor 1s ease infinite;
+}
+
+/*jas kleur veranderen met hover*/
+#Jas_1_:hover {
     animation: truichangecolor 1s ease infinite;
 }
 
@@ -42,11 +71,11 @@ body {
 
 #rechterbeen_1_:active {
     animation: beenchangecolor 1s ease infinite;
+    transition: all 1s ease;
 }
 
 
 /* Hoe spreek ik de rechtbeen aan??*/
-
 #SVGID_41_ {
     animation: beenchangecolor 1s ease infinite;
 }
@@ -58,30 +87,18 @@ body {
 }
 
 
-
-/*
-@keyframes bgchangecolor {
-    from {
-        background-color: #e6d184;
-    }
-    to {
-        background-color: black;
-    }
-}*/
-
-.background {
-    animation: bgchangecolor 1s infinite;
-}
-
 h1,
 h2,
 h3,
 h4 {
-    font-family: avenir black;
+    font-family: 'Anton', sans-serif;
     color: black;
     width: 5em;
-    position: absolute;
+    position: relative;
+    left: 10em;
+    cursor: help;
 }
+
 
 h1 {
     animation: text1 3s infinite;
@@ -89,12 +106,10 @@ h1 {
 
 h2 {
     animation: text2 3s infinite;
-
 }
 
 h3 {
     animation: text3 2s infinite;
-
 }
 
 h4 {
@@ -102,39 +117,39 @@ h4 {
 }
 
 @keyframes text1 {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(10px, 40px);
-  }
+    0% {
+        transform: translate(5px, 150px);
+    }
+    100% {
+        transform: translate(13px, 200px);
+    }
 }
 
 @keyframes text2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(30px, 60px);
-  }
+    0% {
+        transform: translate(65px, 140px);
+    }
+    100% {
+        transform: translate(80px, 160px);
+    }
 }
 
 @keyframes text3 {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(50px, 80px);
-  }
+    0% {
+        transform: translate(180px, 110px);
+    }
+    100% {
+        transform: translate(190px, 120px);
+    }
 }
 
 @keyframes text4 {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(60px, 100px);
-  }
+    0% {
+        transform: translate(180px, 70px);
+    }
+    100% {
+        transform: translate(200px, 100px);
+    }
 }
 
 svg {
@@ -142,7 +157,6 @@ svg {
     margin-top: 5em;
     margin-left: 5em;
 }
-
 
 #trui {
     position: absolute;
@@ -152,7 +166,6 @@ svg {
     position: relative;
     animation: been 2s infinite;
     transform-origin: 330px 160px;
-
 }
 
 #linkerbeen:active {
@@ -170,28 +183,38 @@ svg {
     }
 }
 
-
 #ladderlinks:active {
     animation: ladder 2s infinite;
+    transform-origin: 200px 250px;
+    /* animation: ladderdraaien 2s infinite;
+    transform-origin: 330px 160px; */
+}
+
+#ladderlinks:hover {
+    animation: ladder 2s infinite;
+    transform-origin: 200px 250px;
     /* animation: ladderdraaien 2s infinite;
     transform-origin: 330px 160px; */
 }
 
 #ladderrechts_1_:active {
-/*
-    animation: ladderdraaien2 2s infinite;
-    transform-origin: 330px 160px;
-*/
- animation: ladder 2s infinite;
+    animation: ladder 2s infinite;
+    height: 25em;
+    transform-origin: 400px 230px;
 }
 
+#ladderrechts_1_:hover {
+    animation: ladder 2s infinite;
+    height: 25em;
+    transform-origin: 400px 230px;
+}
 
 @keyframes ladder {
     from {
         transform: scaleY(1);
     }
     to {
-        transform: scaleY(4);
+        transform: scaleY(3);
     }
 }
 
@@ -218,8 +241,6 @@ svg {
 }
 */
 
-
-
 svg {
     animation: fadeIn 1s ease;
 }
@@ -235,8 +256,6 @@ svg {
 
 
 /*Kleuren veranderen*/
-
-
 
 
 /*bron:https://codepen.io/whusterj/pres/bdYKop*/
@@ -260,23 +279,26 @@ svg {
     }
 }
 
-
 @media screen and (max-width: 35em) {
-    svg {
-        width: 60em;
+    #druppel {
+        left: -2em;
+        max-width: 35em;
     }
 }
+
 
 @media screen and (min-width: 35em) {
     svg {
-        width: 80em;
+        width: 70em;
     }
 }
 
 
-/*Schroeven - als je erop klikt ze verschuiven*/
-@keyframes schroefchangecolor {
 
+
+/*Schroeven - als je erop klikt ze verschuiven*/
+
+@keyframes schroefchangecolor {
     100% {
         fill: green;
     }
@@ -286,10 +308,8 @@ svg {
     animation: schroefchangecolor 1s ease infinite;
 }
 
-div button:active {
-  transform: scale(2.0);
-}
 
+/*
 .schroeflinks1.active {
     opacity: 100%;
     transform: scale(200%);
@@ -299,15 +319,71 @@ div button:active {
     opacity: 100%;
     transform: scale(200%);
 }
+*/
+
+#schroeflinks1 {
+    animation: scale 1s infinite;
+    transform-origin: 285px 485px;
+}
+
+#schroeflinks2 {
+    animation: scale 1s infinite;
+    transform-origin: 290px 445px;
+}
+
+#schroefrechts1 {
+    animation: scale 1s infinite;
+    transform-origin: 480px 485px;
+}
+
+#schroefrechts1_2 {
+    animation: scale 1s infinite;
+    transform-origin: 487px 485px;
+}
+
+#schroefrechts2_2 {
+    animation: scale 1s infinite;
+    transform-origin: 450px 390px;
+}
+
+#schroefrechts2 {
+    animation: scale 1s infinite;
+    transform-origin: 444px 390px;
+}
+
+#schroefrechts3 {
+    animation: scale 1s infinite;
+    transform-origin: 400px 300px;
+}
+
+#schroefrechts3_2 {
+    animation: scale 1s infinite;
+    transform-origin: 410px 300px;
+}
+
+@keyframes scale {
+    0 {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+        100% {
+            transform: scale(1);
+        }
+    }
+}
 
 
 /*Plateau en billie omhoog schuiven*/
+
 
 /* #plateau1.2_1_, #plateau1.2, #plateau1.1_1_, #plateau1.1, #hoofd, #kettingen, #bovenlichaam, #linkerbeen, #rechterbeen:active {
 
 animation: omhoog 2s infinite;
 } */
 
+
+/*
 @keyframes omhoog {
     from {
         transform: scaleY(1);
@@ -315,7 +391,65 @@ animation: omhoog 2s infinite;
     to {
         transform: scaleY(-4);
     }
+} */
+
+
+/*Met downkey billie turn*/
+.turnBillienow {
+    animation: turnbillie 2s ease forwards;
+
 }
+
+.billie {
+    animation: turnbillie 2s ease forwards;
+}
+
+#billieTotaal {
+    z-index: 0;
+}
+
+@keyframes turnbillie {
+    0% {
+        top: 0;
+        right: 3px;
+        transform: scaleX(1);
+        visibility: visible;
+    }
+
+    100% {
+        top: 0;
+        right: -30px;
+        transform: scaleX(-1);
+    }
+}
+
+#toggle {
+    position: absolute;
+    width: 3em;
+    z-index: 5;
+}
+
+#knop {
+    position: absolute;
+    fill: black;
+    cursor: pointer;
+}
+
+.invertcolor {
+    filter: invert(200%);
+    background-color: #77fcfc;
+}
+
+#pijlen {
+    width: 2em;
+    z-index: 5;
+    position: absolute;
+    left: -1em;
+    bottom: 2.2em;
+    cursor: pointer;
+}
+
+
 
 
 
