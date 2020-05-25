@@ -75,7 +75,7 @@ body {
 }
 
 
-/* Hoe spreek ik de rechtbeen aan??*/
+/* linkerbeen changecolor*/
 #SVGID_41_ {
     animation: beenchangecolor 1s ease infinite;
 }
@@ -186,15 +186,11 @@ svg {
 #ladderlinks:active {
     animation: ladder 2s infinite;
     transform-origin: 200px 250px;
-    /* animation: ladderdraaien 2s infinite;
-    transform-origin: 330px 160px; */
 }
 
 #ladderlinks:hover {
     animation: ladder 2s infinite;
     transform-origin: 200px 250px;
-    /* animation: ladderdraaien 2s infinite;
-    transform-origin: 330px 160px; */
 }
 
 #ladderrechts_1_:active {
@@ -219,28 +215,6 @@ svg {
 }
 
 
-/*
-@keyframes ladderdraaien {
-
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(70deg);
-    }
-}
-
-@keyframes ladderdraaien2 {
-
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-70deg);
-    }
-}
-*/
-
 svg {
     animation: fadeIn 1s ease;
 }
@@ -259,7 +233,6 @@ svg {
 
 
 /*bron:https://codepen.io/whusterj/pres/bdYKop*/
-
 svg {
     animation-name: floating;
     animation-duration: 3s;
@@ -278,6 +251,9 @@ svg {
         transform: translate(0, -0px);
     }
 }
+
+
+/*Media queries*/
 
 @media screen and (max-width: 35em) {
     #druppel {
@@ -308,18 +284,6 @@ svg {
     animation: schroefchangecolor 1s ease infinite;
 }
 
-
-/*
-.schroeflinks1.active {
-    opacity: 100%;
-    transform: scale(200%);
-}
-
-.schroeflinks2.active {
-    opacity: 100%;
-    transform: scale(200%);
-}
-*/
 
 #schroeflinks1 {
     animation: scale 1s infinite;
@@ -374,27 +338,7 @@ svg {
 }
 
 
-/*Plateau en billie omhoog schuiven*/
-
-
-/* #plateau1.2_1_, #plateau1.2, #plateau1.1_1_, #plateau1.1, #hoofd, #kettingen, #bovenlichaam, #linkerbeen, #rechterbeen:active {
-
-animation: omhoog 2s infinite;
-} */
-
-
-/*
-@keyframes omhoog {
-    from {
-        transform: scaleY(1);
-    }
-    to {
-        transform: scaleY(-4);
-    }
-} */
-
-
-/*Met downkey billie turn*/
+/*Met spatiebalk billie turn*/
 .turnBillienow {
     animation: turnbillie 2s ease forwards;
 
