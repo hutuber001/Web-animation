@@ -7,7 +7,7 @@ var billie = document.querySelector("#billieTotaal");
 window.addEventListener('keydown', toggle);
 
 function toggle(event) {
-    if (event.keyCode == 40) {
+    if (event.keyCode == 32) {
         billie.classList.toggle('billie');
     } else {
     };
